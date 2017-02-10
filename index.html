@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="tablesorter/jquery.tablesorter.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js" ></script>
+    <title>Simple Text Processor</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="formbox-m">
+        <form>
+          <div id="formtitle">Text Processor</div>
+          <div class="mainform">
+            <textarea id="formtext" class = "form-control" placeholder="Enter text" spellcheck="true" name="message"></textarea>
+
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-primary" name="uppercase" onclick="toUpper()">Uppercase</button>
+              <button type="button" class="btn btn-primary" name="lowercase" onclick="toLower()">Lowercase</button>
+              <button type="button" class="btn btn-primary" name="capitalfirst" onclick="capFirst()">Capitalize First</button>
+            </div>
+
+            <div class="btn-group mr-2" role="group" aria-label="Second group">
+              <button type="button" class="btn btn-primary" name="letterfreq" onclick="letterFreq()">Letter frequency count</button>
+              <button type="button" class="btn btn-primary" name="wordfreq" onclick="wordFreq()">Word frequency count</button>
+            </div>
+
+            <div class="btn-group mr-2" role="group" aria-label="Third group">
+              <button type="button" class="btn btn-primary" name="sentences" onclick="singleSentences()">Split into sentences</button>
+              <button type="button" class="btn btn-primary" name="removepunct" onclick="removePunctuation()">Remove punctuation</button>
+              <button type="button" class="btn btn-primary" name="useless" onclick="uselessFunction()">Useless button</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Frequency Counts</div>
+        <table class="table tablesorter" id="freqtable">
+          <thead id="tablehead">
+          </thead>
+          <tbody id="tablebody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>
